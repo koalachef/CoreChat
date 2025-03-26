@@ -1,0 +1,51 @@
+# CoreChat
+
+Ein simpler, sicherer Chat im Terminal, mit Python gemacht.
+
+## Was ist CoreChat?
+CoreChat ist ein Chat-Programm, wo du verschlüsselte Nachrichten an andere schicken kannst. Es nutzt **Diffie-Hellman-Schlüsselaustausch** und **Fernet-Verschlüsselung**, damit die Nachrichten sicher sind. Du kannst private Nachrichten an einen Benutzer oder Broadcasts an alle schicken.
+
+## Installation
+
+### Was du brauchst
+- *Python3*: 
+- *cryptography*
+
+### Wie installieren
+1. **Abhängigkeiten holen**: Du brauchst cryptography
+   pip install cryptography
+2. Dateien runterladen: Speicher server.py und client.py in einen Ordner.
+3. 2 Terminals öffnen: Für Server und Client 
+
+### Wie benutzen?
+Server starten
+    python server.py
+
+
+### Client starten
+Starte den Client:
+    python client.py
+
+    Gib einen Benutzernamen ein.
+        Private Nachricht: @Benutzer Nachricht (z. B. @bob Hallo)
+        Wer ist da: SHOW
+        Aufhören: !DISCONNECT
+
+### Server-Befehle
+    @show: Zeigt alle Benutzer.
+    @Benutzer Nachricht: Schickt was an einen Benutzer.
+    @BC Nachricht: Schickt was an alle.
+
+### Achtung: *Nachrichten vom Server sind noch nicht verschlüsselt!!!!*
+
+### Meine Ziele für CoreChat
+    Web-App: Einen Client für den Browser.
+    Bessere Sicherheit: X25519 statt DH für stärkere Verschlüsselung.
+    Passwörter: Login mit Passwort.
+    Broadcast fixen: Server-Nachrichten richtig verschlüsseln.
+    Echtes E2EE
+    Backend vielleicht auf Node...
+    SQL Datenbank für Server 
+    Offline Nachrichten etc.....
+
+
